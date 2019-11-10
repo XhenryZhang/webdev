@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* comment */
+    /* allows us to include padding and border in an elements total width and height */
+    /* by default: width + padding + border = actual width
+                   height + padding + border = actual height */
+    /* elements often appears bigger, because border and padding are added to element's specified width/height */
+    /* defines whether width/height of element includes its padding and borders */
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    font-family: inherit;
+    font-size: 18px;
+}
+
+h1, h2 {
+    color: #320280;
+    font-family: sans-serif, monospace;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.link {
+    font-family: inherit;
+    font-size: 15px;
+    /* links are inline elements so they don't accept margins */
+}
+
+.main-text {
+    text-align: left;
+    margin-bottom: 20px;
+    /* not a container */
+}
+
+.author-texts {
+    font-size: 20px;
+    font-family: monospace;
+    color: darkgreen;
+    float: left;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.container { /* container for all html elements on screen */
+    /* doesn't affect specific elements, just the box of all elements */
+    width: 1200px;
+    /* margin: top right bottom left */
+    margin: 20px auto 120px auto;
+    /*background-color: blueviolet;*/ /* no, based on the width and margins */
+}
+
+.blog-post {
+    /*background-color: #0000FF;*/
+    width: 75%; /* 75 percent of container */
+    float: left;
+    padding-right: 30px;
+    position: relative;
+    /* if no box-sizing tag, then width would be 75% of container + 30px */
+}
+
+.other-posts {
+    background-color: #00FF00;
+    width: 25%;
+    float: left;
+}
+
+.author-box {
+    /*background-color: #FFFF00;*/
+    border-top: 1px solid #6c6c6c;
+    padding-top: 10px; /* makes the element larger */
+}
+
+.other {
+    margin-bottom: 20px;
+}
+
+/* style a specific image, selects all images inside the author-box div */
+.author-box img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    float: left;
+}
+
+.blog-post img {
+    height: 155px;
+    width: 300px;
+}
+
+.date {
+    position: absolute; /* absolutely positioned within it's parent container */
+    top: 10px;
+    right: 30px; /* no diff between right side of parent container and element */
+}
+
+
+
